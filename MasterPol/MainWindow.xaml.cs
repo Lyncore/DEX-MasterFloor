@@ -26,7 +26,7 @@ namespace MasterPol
 
         void LoadData()
         {
-            using var context = new MasterPolContext();
+            using var context = new Wsr1DexDemoContext();
             this.ProductType.ItemsSource = context.ProductTypes.ToArray();
         }
     }
