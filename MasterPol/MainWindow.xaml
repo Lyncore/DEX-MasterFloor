@@ -5,18 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterPol"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontFamily="Arial Black" Background="#FFEC7171">
+        Title="Мастер пол" Height="450" Width="800" MinHeight="450" MinWidth="800" FontFamily="Segoe UI" Background="#FFFFFF" >
     <Grid>
-        <DataGrid x:Name="ProductType" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn  Binding="{Binding Id}" Header="Код" />
-                <DataGridTextColumn Binding="{Binding Name}" Header="Название"/>
-                <DataGridTextColumn Binding="{Binding Coefficient}" Header="Коэффициент"/>
-            </DataGrid.Columns>
+        <ListView x:Name="Partners" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  HorizontalContentAlignment="Stretch" SelectionChanged="Partners_SelectionChanged" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Background="#FFF4E8D3">
+                        <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                            <Label Content="{Binding Type}" FontSize="14" />
+                            <Label Content="|" FontSize="14" />
+                            <Label Content="{Binding Name}" FontSize="14" Width="501" />
 
-
-
-        </DataGrid>
-         
+                            <Label FontSize="14"  Content="{Binding Discount, StringFormat={}{0:p2}}"/>
+                        </StackPanel>
+                        <Label Content="{Binding DirectorName}" Margin="5,0,5,0" />
+                        <Label Content="{Binding DirectorPhone}" Margin="5,0,5,0" />
+                        <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                            <Label Content="Рейтинг:"/>
+                            <Label Content="{Binding Rank}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>
