@@ -22,40 +22,10 @@ namespace MasterPol
         public MainWindow()
         {
             InitializeComponent();
-            LoadData();
         }
         /// <summary>
         /// Загрузка данных
         /// </summary>
-        void LoadData()
-        {
-            try
-            {
-                using var context = new Wsr1DexDemoContext();
 
-                var mapped = context.Partners
-                    .Include(p => p.Histories)
-                    .Select(p => new {
-                        p.Id,
-                        p.Type,
-                        p.Name,
-                        p.DirectorName,
-                        p.DirectorPhone,
-                        p.Rank,
-                        Discount = $"{DiscountHelper.Calculate(p.Histories.Sum(p => p.Count))} %"
-
-                    })
-                    .ToArray();
-
-                Partners.ItemsSource = mapped;
-            } catch (Exception ex) {
-                MessageBox.Show($"Ошибка: {ex.Message}");
-            }
-        }
-
-        private void Partners_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

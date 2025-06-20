@@ -10,6 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Мастер пол.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="Resources\Мастер пол.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Resources\Мастер пол.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -36,9 +46,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Import\Product_type_import.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Мастер пол.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

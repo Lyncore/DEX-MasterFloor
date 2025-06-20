@@ -1,0 +1,43 @@
+﻿<Page x:Class="MasterPol.MaterialList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MasterPol"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MaterialList">
+
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <StackPanel DockPanel.Dock="Top">
+                <Button Click="Button_Click">Добавить</Button>
+                <Button Click="Button_Click_1">Список продукции</Button>
+            </StackPanel>
+            <DataGrid Name="Partners"/>
+            <!--<ListView x:Name="Partners" 
+              d:ItemsSource="{d:SampleData ItemCount=5}" 
+              HorizontalContentAlignment="Stretch" SelectionChanged="Partners_SelectionChanged" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Background="#FFF4E8D3">
+                            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                                <Label Content="{Binding Type}" FontSize="14" />
+                                <Label Content="|" FontSize="14" />
+                                <Label Content="{Binding Name}" FontSize="14" Width="501" />
+
+                                <Label FontSize="14"  Content="{Binding Discount, StringFormat={}{0:p2}}"/>
+                            </StackPanel>
+                            <Label Content="{Binding DirectorName}" Margin="5,0,5,0" />
+                            <Label Content="{Binding DirectorPhone}" Margin="5,0,5,0" />
+                            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                                <Label Content="Рейтинг:"/>
+                                <Label Content="{Binding Rank}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+        </DockPanel>
+    </Grid>
+</Page>
