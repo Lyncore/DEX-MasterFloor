@@ -14,8 +14,7 @@
                 <Button Click="Button_Click">Добавить</Button>
                 <Button Click="Button_Click_1">Список продукции</Button>
             </StackPanel>
-            <DataGrid Name="Partners"/>
-            <!--<ListView x:Name="Partners" 
+            <ListView x:Name="Partners" 
               d:ItemsSource="{d:SampleData ItemCount=5}" 
               HorizontalContentAlignment="Stretch" SelectionChanged="Partners_SelectionChanged" >
                 <ListView.ItemTemplate>
@@ -37,7 +36,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>-->
+            </ListView>
         </DockPanel>
     </Grid>
 </Page>
